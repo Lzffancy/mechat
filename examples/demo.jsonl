@@ -1,0 +1,60 @@
+{"ts": 1767229920, "time": "2026-01-01 09:12:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "元旦过完了，明天要上班，谁不是牛马"}
+{"ts": 1767230100, "time": "2026-01-01 09:15:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "我们单位 4 号才收假，领导说今年项目收尾不用赶"}
+{"ts": 1767230160, "time": "2026-01-01 09:16:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "羡慕，我们已经开始加班了，年终奖还不知道有没有"}
+{"ts": 1767230280, "time": "2026-01-01 09:18:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "sticker", "content": "[sticker]"}
+{"ts": 1767241800, "time": "2026-01-01 12:30:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "中午吃啥，楼下那家烩面涨价到 28 了"}
+{"ts": 1767241980, "time": "2026-01-01 12:33:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "自己做吧，我昨天炖了牛肉，成本不到 40，能吃三顿"}
+{"ts": 1767242400, "time": "2026-01-01 12:40:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "@林工 你还会做饭，我以为你只会写代码"}
+{"ts": 1767242460, "time": "2026-01-01 12:41:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "做饭比调 bug 简单，不用考虑并发"}
+{"ts": 1767242460, "time": "2026-01-01 12:41:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "hhh"}
+{"ts": 1767270060, "time": "2026-01-01 20:21:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "豆包现在能读图片了，试了下识别表格还行"}
+{"ts": 1767270180, "time": "2026-01-01 20:23:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "大模型的 token 价格降得挺快，本地跑的模型也够用了"}
+{"ts": 1767270300, "time": "2026-01-01 20:25:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "text", "content": "我买了新手机，小米的，电池真顶"}
+{"ts": 1767270600, "time": "2026-01-01 20:30:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "多少钱"}
+{"ts": 1767270660, "time": "2026-01-01 20:31:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "text", "content": "3299，比苹果便宜一半"}
+{"ts": 1767270780, "time": "2026-01-01 20:33:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "现在换手机不如换电池，我上一台用了五年"}
+{"ts": 1767271200, "time": "2026-01-01 20:40:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "app:quote", "content": "<msg><appmsg><title>五年也太久了</title><type>57</type><refermsg><chatusr>wxid_demo_b</chatusr><displayname>老周</displayname><content>上一条</content></refermsg></appmsg></msg>"}
+{"ts": 1767271500, "time": "2026-01-01 20:45:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "手机又没坏，能打电话就行"}
+{"ts": 1769911320, "time": "2026-02-01 10:02:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "今年过年你们回老家吗"}
+{"ts": 1769911500, "time": "2026-02-01 10:05:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "回，高铁票抢了两天，抢到一张凌晨的"}
+{"ts": 1769911560, "time": "2026-02-01 10:06:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "我今年不回了，机票太贵"}
+{"ts": 1769911740, "time": "2026-02-01 10:09:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "过年期间的酒店也翻倍，我看了下景区附近一晚 800"}
+{"ts": 1769911920, "time": "2026-02-01 10:12:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "text", "content": "现在出门旅游都是看价格决定去不去"}
+{"ts": 1769912400, "time": "2026-02-01 10:20:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "相亲的事我妈又提了，说彩礼要准备好"}
+{"ts": 1769912520, "time": "2026-02-01 10:22:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "你们那儿彩礼多少"}
+{"ts": 1769912700, "time": "2026-02-01 10:25:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "说要 18 万 8，还得有房"}
+{"ts": 1769912820, "time": "2026-02-01 10:27:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "这个数在我们县城算正常，隔壁村还有 28 万的"}
+{"ts": 1769913000, "time": "2026-02-01 10:30:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "text", "content": "怪不得现在没人结婚"}
+{"ts": 1769913180, "time": "2026-02-01 10:33:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "彩礼这事本质是两个家庭在谈条件，跟两个人感情关系不大"}
+{"ts": 1769913600, "time": "2026-02-01 10:40:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "app:quote", "content": "<msg><appmsg><title>这话有点扎心</title><type>57</type><refermsg><chatusr>wxid_demo_e</chatusr><displayname>林工</displayname><content>上一条</content></refermsg></appmsg></msg>"}
+{"ts": 1769913900, "time": "2026-02-01 10:45:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "我表弟去年结婚，彩礼给了，嫁妆回来了七成"}
+{"ts": 1770037500, "time": "2026-02-02 21:05:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "今天小区有人放烟花，吵了一晚上"}
+{"ts": 1770037800, "time": "2026-02-02 21:10:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "image", "content": "[image]"}
+{"ts": 1770037920, "time": "2026-02-02 21:12:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "这是你家楼下？"}
+{"ts": 1770037980, "time": "2026-02-02 21:13:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "text", "content": "对，刚拍的"}
+{"ts": 1770043200, "time": "2026-02-02 22:40:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "明早还要上班，先睡了"}
+{"ts": 1772499000, "time": "2026-03-03 08:50:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "昨天体检，医生说我血脂高，要少吃油"}
+{"ts": 1772499300, "time": "2026-03-03 08:55:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "我也该减肥了，最近胖了六斤"}
+{"ts": 1772499720, "time": "2026-03-03 09:02:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "跑步吧，我每周三次，一次五公里"}
+{"ts": 1772499900, "time": "2026-03-03 09:05:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "text", "content": "跑不动，我最多走三公里"}
+{"ts": 1772511600, "time": "2026-03-03 12:20:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "公司食堂今天的菜还行，红烧肉做得不错"}
+{"ts": 1772511900, "time": "2026-03-03 12:25:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "你单位食堂一直很好，我们只有盒饭"}
+{"ts": 1772537400, "time": "2026-03-03 19:30:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "下班了，今天又是十点才走"}
+{"ts": 1772537580, "time": "2026-03-03 19:33:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "这么晚，你们部门是不是一直缺人"}
+{"ts": 1772537700, "time": "2026-03-03 19:35:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "缺，招了半年没人来"}
+{"ts": 1772538000, "time": "2026-03-03 19:40:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "体制内也这样？我以为很闲"}
+{"ts": 1772538300, "time": "2026-03-03 19:45:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "闲的是别人，我们科室天天写材料"}
+{"ts": 1772590200, "time": "2026-03-04 10:10:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "周末有人一起去爬山吗"}
+{"ts": 1772590320, "time": "2026-03-04 10:12:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "text", "content": "算我一个"}
+{"ts": 1772590500, "time": "2026-03-04 10:15:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "我去，正好试试新买的徒步鞋"}
+{"ts": 1772590680, "time": "2026-03-04 10:18:00", "sender_id": 0, "sender_wxid": "wxid_demo_c", "sender": "小满", "type": "text", "content": "我要加班，你们玩"}
+{"ts": 1772590920, "time": "2026-03-04 10:22:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "app:quote", "content": "<msg><appmsg><title>下次一定带上你</title><type>57</type><refermsg><chatusr>wxid_demo_c</chatusr><displayname>小满</displayname><content>上一条</content></refermsg></appmsg></msg>"}
+{"ts": 1772591400, "time": "2026-03-04 10:30:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "天气预报说周末有雨，山上可能滑"}
+{"ts": 1772591520, "time": "2026-03-04 10:32:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "@老周 那改成周六上午，早去早回"}
+{"ts": 1772625900, "time": "2026-03-04 20:05:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "text", "content": "山上照片发群里了"}
+{"ts": 1772625960, "time": "2026-03-04 20:06:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "image", "content": "[image]"}
+{"ts": 1772626140, "time": "2026-03-04 20:09:00", "sender_id": 0, "sender_wxid": "wxid_demo_e", "sender": "林工", "type": "text", "content": "风景不错，下次走长线"}
+{"ts": 1772626200, "time": "2026-03-04 20:10:00", "sender_id": 0, "sender_wxid": "wxid_demo_b", "sender": "老周", "type": "text", "content": "你们几点下山的"}
+{"ts": 1772626320, "time": "2026-03-04 20:12:00", "sender_id": 0, "sender_wxid": "wxid_demo_d", "sender": "豆子", "type": "text", "content": "四点就下来了，下来还吃了碗面"}
+{"ts": 1772626500, "time": "2026-03-04 20:15:00", "sender_id": 0, "sender_wxid": "", "sender": "（系统）", "type": "system", "content": "老周撤回了一条消息"}
+{"ts": 1772672400, "time": "2026-03-05 09:00:00", "sender_id": 0, "sender_wxid": "wxid_demo_a", "sender": "阿岚", "type": "text", "content": "下个月我可能要去外地出差，一周"}

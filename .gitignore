@@ -1,0 +1,36 @@
+# 明文库与所有导出产物：绝不入库
+*.db
+*.db-wal
+*.db-shm
+*.material
+*.jsonl
+!examples/demo.jsonl
+*.pkl
+*.npy
+keys/
+out/
+wx_dec/
+wx_backup/
+
+# 第三方取密钥工具与其产物（含明文密钥）
+.tools/
+recovered_key.txt
+
+# 分析产物（含真人昵称与会话内容）
+*_members.csv
+!examples/demo_members.csv
+*报告*.html
+*分析*.html
+*人类学*.html
+report_data.json
+profiles.json
+members.csv
+topic_evolution.csv
+strong_pairs.csv
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
