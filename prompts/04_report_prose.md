@@ -58,25 +58,38 @@ python -m wxchat_analysis report --input 群.jsonl --members 群_members.csv -o 
 - 标题短，一行放得下，不超过 12 个汉字。
 - 段落不超过 4 句，句子不超过 40 字。
 
-版式（如果输出 HTML）：
+**不要输出 HTML，不要写 CSS。** 排版由 `python -m wxchat_analysis html` 负责，
+模板是纸媒杂志风（宋体正文、单色强调、620px 单栏、手机优先）。你只交 Markdown：
 
-- 单栏，最大宽度 620px，手机优先；
-- 不用 table，用两列定义列表（.row/.k/.v）代替；
-- 一个强调色，覆盖面积不超过全文的 30%；
-- 正文 16~17px，行高 1.85 左右，标题与正文同一基线；
-- 不引外部字体和脚本，单文件可离线打开。
+- 分节标题 `## 00`（封面导语）、`## 01` 到 `## 06`，对应报告的六个章节
+- 段落直接写，空行分段
+- `>` 开头是引语块，`::` 后面接来源（可省）
+- `- ` 开头是列表
+- `**文字**` 是加粗
+- 数字、图表、排行榜都不用你写，它们由代码从 report_data.json 现算
 
-输出：HTML 片段（不含 <html> 外壳），或者 Markdown，按我指定的来。
-不要在开头写"以下是我为你撰写的报告"。
+输出只有这些文字块。不要在开头写"以下是我为你撰写的报告"。
 ```
+
+## 为什么不让模型碰排版
+
+模型写出来的 HTML 有两个固定问题：一是每次生成的 CSS 不一样，两版报告的同一段文字
+长得不同，读者以为换了口径；二是它会自己加 `<style>` 覆盖模板，把字体分工和单色强调
+这两条最关键的规则破坏掉。模板里已经有的东西，模型不重复造。
 
 ## 验收
 
 ```bash
-python -m wxchat_analysis prose --html 报告.html
+# 生成：$ 是命令，不是模型输出
+python -m wxchat_analysis html --data out/report_data.json --prose 正文.md -o 报告.html
+
+# 体检：正文和成稿各跑一遍
+python -m wxchat_analysis prose --text 正文.md
+python skills/human-writing/scripts/check_prose.py 正文.md
 ```
 
 要求：中文冒号 0、破折号 0、翻案句 0、黑话 0。警告项（用词、长句）人工看。
+完整规则在 `skills/human-writing/`，写作纪律的源头在那里。
 
 再手工核对三件事：
 

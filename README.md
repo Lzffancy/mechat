@@ -7,11 +7,13 @@
 ```
 mechat/
 ├── wxchat_export/       ① 提取：探针 → 密钥校验 → 页级解密 → 导出（复用现成取密钥工具）
-├── wxchat_analysis/     ② 分析：统计 / 分词 / 主题 / 关系网络 / 节奏 / 画像 / 汇总
+├── wxchat_analysis/     ② 分析：统计 / 分词 / 主题 / 关系网络 / 节奏 / 画像 / 汇总 / 排版
 ├── prompts/             ③ LLM 环节：给聚类命名、写人物卡、做关系深挖、写正文、返修文案
+├── skills/human-writing/  ④ 写作规范与硬禁令检查脚本（随仓库走）
 ├── docs/METHOD.md       分析方法与口径（含所有踩过的坑）
 ├── docs/LLM_BOUNDARY.md 哪一步必须写死、哪一步必须交给模型，以及为什么
-└── examples/            一份 30 条的合成样例，跑得通全链路，不含任何真实聊天内容
+├── docs/REPORT_STYLE.md 报告版式：纸媒杂志风的六条规则
+└── examples/            合成样例（数据 + 正文稿件），跑得通全链路，不含真实聊天内容
 ```
 
 ## 快速开始
@@ -41,10 +43,19 @@ python -m wxchat_analysis ctx --input <群名>.jsonl --who 某人 --pad 8
 python -m wxchat_analysis ctx --input <群名>.jsonl --search "彩礼" --pad 15
 python -m wxchat_analysis prose --html 报告.html
 
+# ④ 渲染杂志风报告（单文件 HTML，离线可读）
+#    模型只写文字，排版交给代码
+python -m wxchat_analysis html --data out/report_data.json --prose 正文.md -o 报告.html
+
 # 合成样例，验证链路是否正常（不涉及真实数据）
 python -m wxchat_analysis report --input examples/demo.jsonl \
     --members examples/demo_members.csv -o /tmp/demo_out
+python -m wxchat_analysis html --data /tmp/demo_out/report_data.json \
+    --prose examples/prose_sample.md -o /tmp/demo_out/demo.html
 ```
+
+报告版式的规则（字体分工、单色强调、纸感、线条体例、图表为什么不用 SVG）
+在 [docs/REPORT_STYLE.md](docs/REPORT_STYLE.md)。
 
 ## 分析方法长什么样
 

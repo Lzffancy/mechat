@@ -9,8 +9,12 @@
 | [01_cluster_naming.md](01_cluster_naming.md) | 给聚类簇命名、判断垃圾桶簇 | `cluster --k 12` | 簇名 + 保留/丢弃 |
 | [02_member_profile.md](02_member_profile.md) | 成员画像 | `profile` + `ctx --who` | 人物卡（150~250 字） |
 | [03_relationship_deepdive.md](03_relationship_deepdive.md) | 单人 / 双人关系深挖 | `ctx --search` 或指定时段 | 时间线 + 结构判断 |
-| [04_report_prose.md](04_report_prose.md) | 报告正文 | `report_data.json` + 事实卡 | HTML / Markdown |
+| [04_report_prose.md](04_report_prose.md) | 报告正文 | `report_data.json` + 事实卡 | Markdown 文字块 |
 | [05_prose_audit.md](05_prose_audit.md) | 文案返修 | `prose --html` 的体检结果 | 逐条改写 |
+
+`04` 只输出文字，不输出 HTML。排版由 `python -m wxchat_analysis html` 套
+纸媒杂志风模板完成，规则见 [docs/REPORT_STYLE.md](../docs/REPORT_STYLE.md)。
+写作规范的完整版在 [skills/human-writing/](../skills/human-writing/)。
 
 ## 调用链
 
@@ -24,6 +28,8 @@
                         04 正文 ◀────────┘  + report_data.json
                               │
                         05 返修 ◀── prose.check 的体检结果
+                              │
+                        html 命令套模板（代码做排版，不是模型）
                               ▼
                           交付
 ```

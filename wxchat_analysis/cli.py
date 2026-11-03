@@ -16,7 +16,7 @@ import json
 import sys
 from pathlib import Path
 
-from . import cluster, context, netgraph, prose, report, schema, stats, words
+from . import cluster, context, htmlreport, netgraph, prose, report, schema, stats, words
 from .profile import hints, profile
 from .topics import TopicLexicon
 
@@ -186,6 +186,17 @@ def cmd_prose(args) -> None:
     sys.exit(0 if rep.clean else 1)
 
 
+def cmd_html(args) -> None:
+    data = json.loads(Path(args.data).read_text(encoding="utf-8"))
+    prose_blocks = htmlreport.load_prose(args.prose) if args.prose else None
+    p = htmlreport.write(data, args.out, prose=prose_blocks, title=args.title)
+    print(f"写出 {p}（{p.stat().st_size // 1024} KB，单文件离线可读）")
+    if prose_blocks:
+        print(f"  填入正文分节 {', '.join(sorted(prose_blocks))}")
+    else:
+        print("  未填正文（--prose），结论段是占位提示")
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="wxchat_analysis", description="微信群聊分析工具")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -238,6 +249,13 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--budget", type=int, default=120, help="单块最大消息数")
     sp.add_argument("-o", "--out")
     sp.set_defaults(func=cmd_ctx)
+
+    sp = sub.add_parser("html", help="渲染杂志风报告（单文件 HTML）")
+    sp.add_argument("--data", required=True, help="report_data.json")
+    sp.add_argument("--prose", help="模型写的正文 md，用 ## 01 / ## 06 分节")
+    sp.add_argument("--title", help="标题，缺省用「群名 的 N 天」")
+    sp.add_argument("-o", "--out", default="报告.html")
+    sp.set_defaults(func=cmd_html)
 
     sp = sub.add_parser("prose", help="文案硬禁令体检")
     sp.add_argument("--html")

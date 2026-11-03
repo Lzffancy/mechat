@@ -8,7 +8,11 @@
 ## 输入
 
 ```bash
+# 内置版，只报硬禁令，够日常用
 python -m wxchat_analysis prose --html 报告.html
+
+# 完整版，报得细，交付前跑这个
+python skills/human-writing/scripts/check_prose.py 正文.md
 ```
 
 输出类似：

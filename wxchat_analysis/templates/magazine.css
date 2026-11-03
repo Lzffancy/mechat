@@ -1,0 +1,195 @@
+/* 纸媒杂志风报告样式
+ * 六条核心规则，改样式前先看这里
+ * 1. 字体分工 —— 正文宋体，标签/日期/数字/注释一律无衬线。这比任何配色都管用。
+ * 2. 单色强调 —— 全篇一个强调色（编辑部红 #a63a28），覆盖面积不超过 30%。
+ * 3. 纸感 —— --paper 暖白 + 极淡横向纸纹，页面外暖灰。透明度再高一点就像扫描件。
+ * 4. 线条体例 —— 章节头 1.5px 粗线起头；结论框 2.5px/1px 双线；引语上下细线，不用左侧色块。
+ * 5. 首字下沉 —— 首节首段 ::first-letter 54px 红宋体，float 占两行。
+ * 6. 栏目标签 —— 短红线 + 小字字距 .18em，不用彩色圆角块。
+ */
+
+:root{
+  --paper:#faf8f3;
+  --bg:#e9e4d9;
+  --ink:#1c1a17;
+  --ink2:#4a453d;
+  --ink3:#8a8378;
+  --rule:#1c1a17;
+  --hair:#d8d2c6;
+  --accent:#a63a28;
+  --muted:#cdc7ba;
+  --serif:"Songti SC","Noto Serif SC","Source Han Serif SC","SongtiTC",SimSun,"STSong",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB",
+         "Microsoft YaHei","Noto Sans SC",Helvetica,Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:17px;
+  line-height:1.88;
+  letter-spacing:.01em;
+}
+
+#bar{position:fixed;top:0;left:0;height:2.5px;width:0;background:var(--accent);z-index:9}
+
+.page{
+  max-width:620px;
+  margin:0 auto;
+  padding:26px 22px 60px;
+  background:var(--paper);
+  background-image:repeating-linear-gradient(0deg,
+      rgba(28,26,23,.015) 0 1px, rgba(28,26,23,0) 1px 4px);
+  box-shadow:0 1px 0 rgba(28,26,23,.06), 0 18px 48px rgba(28,26,23,.08);
+}
+
+/* ---------- 封面 ---------- */
+.cover{padding:26px 0 30px;border-bottom:2.5px solid var(--rule)}
+.kicker{
+  font-family:var(--sans);font-size:11px;letter-spacing:.22em;
+  color:var(--accent);text-transform:uppercase;margin-bottom:12px
+}
+h1{
+  font-family:var(--serif);font-size:33px;line-height:1.25;font-weight:700;
+  margin:0 0 14px;letter-spacing:-.01em;text-wrap:balance
+}
+.dek{font-size:16px;line-height:1.8;color:var(--ink2);margin:0 0 22px}
+.masthead{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px 12px;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:12px 0;margin-top:6px
+}
+.masthead .m{text-align:left;padding-left:12px;border-left:1px solid var(--hair)}
+.masthead .m:first-child{padding-left:0;border-left:0}
+.masthead .n{font-family:var(--sans);font-size:22px;font-weight:600;line-height:1.2;color:var(--ink)}
+.masthead .l{font-family:var(--sans);font-size:10px;letter-spacing:.14em;color:var(--ink3);margin-top:3px}
+
+/* ---------- 章节 ---------- */
+section{margin-top:44px}
+.sec-head{border-top:1.5px solid var(--rule);padding-top:12px;margin-bottom:18px;
+  display:flex;align-items:baseline;gap:10px}
+.sec-head .num{
+  font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.18em;
+  color:var(--accent);white-space:nowrap;flex:0 0 auto
+}
+.sec-head .tt{flex:1 1 auto;min-width:0}
+.sec-head h2{
+  font-family:var(--serif);font-size:23px;line-height:1.35;font-weight:700;margin:0;
+  text-wrap:balance
+}
+.sec-head .note{
+  font-family:var(--sans);font-size:12px;line-height:1.7;color:var(--ink3);
+  margin:7px 0 0;display:block
+}
+.sub{
+  display:flex;align-items:center;gap:8px;margin:26px 0 10px;
+  font-family:var(--sans);font-size:11px;letter-spacing:.18em;color:var(--ink2)
+}
+.sub::before{content:"";display:inline-block;width:18px;height:1.5px;background:var(--accent)}
+h3{font-family:var(--serif);font-size:19px;font-weight:700;margin:24px 0 8px;text-wrap:balance}
+
+p{margin:0 0 16px}
+.lead::first-letter{
+  float:left;font-family:var(--serif);font-size:54px;line-height:.86;
+  font-weight:700;color:var(--accent);margin:4px 8px 0 0
+}
+em{font-style:normal;color:var(--accent);font-weight:700}
+b{font-weight:700}
+ul{margin:0 0 16px;padding-left:18px}
+li{margin-bottom:6px}
+
+/* ---------- 数据块 ---------- */
+figure{margin:20px 0 24px}
+figure svg{display:block;width:100%;height:auto}
+figcaption{
+  font-family:var(--sans);font-size:11px;line-height:1.6;color:var(--ink3);
+  margin-top:8px;letter-spacing:.02em
+}
+.dl{margin:16px 0 20px}
+.dl .row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:7px 0;border-bottom:1px dotted var(--hair)
+}
+.dl .row:first-child{border-top:1px solid var(--hair)}
+.dl .k{font-family:var(--sans);font-size:13px;color:var(--ink2);flex:0 0 auto}
+.dl .v{font-family:var(--serif);font-size:16px;font-weight:700;text-align:right}
+.dl .v small{font-family:var(--sans);font-size:11px;font-weight:400;color:#6f6a5f;margin-left:6px}
+
+.cards{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0 20px}
+.card{border-left:2.5px solid var(--accent);padding:2px 0 2px 14px}
+.card .t{font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--accent);margin-bottom:3px}
+.card .h{font-family:var(--serif);font-size:17px;font-weight:700;line-height:1.5;margin-bottom:4px}
+.card .b{font-size:15px;line-height:1.75;color:var(--ink2)}
+
+/* ---------- 图表（HTML 实现，字号跟着断点走，不用 SVG 缩放） ---------- */
+.vchart{display:flex;align-items:flex-end;gap:3px;height:150px;
+  border-bottom:1px solid var(--rule);margin-top:14px}
+.vchart .col{flex:1 1 0;height:100%;display:flex;flex-direction:column;
+  justify-content:flex-end;align-items:center;min-width:0}
+.vchart .bw{flex:1 1 auto;width:100%;min-height:0;display:flex;align-items:flex-end}
+.vchart .bar{width:100%;background:var(--muted);min-height:1px}
+.vchart .col.hi .bar{background:var(--accent)}
+.vchart .val{font-family:var(--sans);font-size:12px;font-weight:700;color:var(--accent);
+  margin-bottom:4px;white-space:nowrap}
+.vchart .lb{font-family:var(--sans);font-size:10px;color:var(--ink3);
+  margin-top:6px;white-space:nowrap;overflow:hidden}
+
+.hbars{margin:14px 0 0}
+.hbars .hb{display:grid;grid-template-columns:minmax(78px,34%) 1fr 52px;
+  align-items:center;gap:10px;padding:5px 0}
+.hbars .k{font-family:var(--sans);font-size:13px;color:var(--ink2);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hbars .t{height:11px;background:rgba(28,26,23,.06)}
+.hbars .t i{display:block;height:100%;background:var(--muted)}
+.hbars .hb.hi .t i{background:var(--accent)}
+.hbars .v{font-family:var(--sans);font-size:12.5px;color:var(--ink2);text-align:right}
+
+@media (max-width:480px){
+  .vchart{height:132px;gap:2px}
+  .vchart .lb{font-size:10px}
+  .vchart .col.alt .lb{visibility:hidden}
+  .vchart .val{font-size:11.5px}
+  .hbars .hb{grid-template-columns:minmax(66px,40%) 1fr 46px;gap:7px}
+  .hbars .k{font-size:12px}
+}
+
+.pull{
+  margin:24px 0;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  font-size:19px;line-height:1.7;font-weight:700;text-align:center;text-wrap:balance
+}
+.pull .src{display:block;font-family:var(--sans);font-size:11px;font-weight:400;color:var(--ink3);margin-top:8px;letter-spacing:.1em}
+
+.concl{
+  margin-top:30px;padding:16px 16px 14px;
+  border-top:2.5px solid var(--accent);border-bottom:1px solid var(--accent);
+  background:linear-gradient(180deg, rgba(166,58,40,.055) 0 66%, rgba(166,58,40,0) 100%)
+}
+.concl .big{font-size:18px;font-weight:700;line-height:1.7;margin-bottom:8px;text-wrap:balance}
+.concl .big b{color:var(--ink);font-weight:700}
+.concl p{font-size:15px;color:var(--ink2);margin:0}
+
+.foot{
+  margin-top:46px;padding-top:12px;border-top:1px solid var(--hair);
+  font-family:var(--sans);font-size:11px;line-height:1.8;color:var(--ink3)
+}
+.todo{color:var(--ink3);font-family:var(--sans);font-size:13px;padding:10px 0;border-top:1px dotted var(--hair)}
+
+/* ---------- 断点 ---------- */
+@media (max-width:480px){
+  .page{padding:22px 18px 50px}
+  body{font-size:16px;line-height:1.85}
+  h1{font-size:26px}
+  .sec-head h2{font-size:20px}
+  .masthead{grid-template-columns:repeat(2,1fr);gap:14px 12px}
+  .lead::first-letter{font-size:46px}
+}
+@media (min-width:700px){
+  .page{margin:34px auto;padding:40px 46px 70px}
+  h1{font-size:38px}
+  .sec-head h2{font-size:25px}
+  .cards{grid-template-columns:1fr 1fr}
+}
